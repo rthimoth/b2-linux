@@ -68,10 +68,6 @@ tu peux aussi use des trucs comme docker compose ps ou docker compose top qui so
 docker compose --help pour voir les bails
 
 ```
-[ranvin@node1 compose_test]$ docker exec -it compose_test-conteneur_nul-1 bash
-```
-
-```
 [ranvin@node1 compose_test]$ docker-compose ps
 NAME                                 IMAGE     COMMAND        SERVICE               CREATED          STATUS          PORTS
 compose_test-conteneur_flopesque-1   debian    "sleep 9999"   conteneur_flopesque   19 seconds ago   Up 17 seconds
@@ -95,6 +91,10 @@ effectuez un ping conteneur_flopesque (ouais ouais, avec ce nom là)
 un conteneur est aussi léger que possible, aucun programme/fichier superflu : t'auras pas la commande ping !
 il faudra installer un paquet qui fournit la commande ping pour pouvoir tester
 juste pour te faire remarquer que les conteneurs ont pas besoin de connaître leurs IP : les noms fonctionnent
+
+```
+[ranvin@node1 compose_test]$ docker exec -it compose_test-conteneur_nul-1 bash
+```
 
 ```
 apt-get update && apt-get install -y iputils-ping
