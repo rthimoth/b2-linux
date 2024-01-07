@@ -160,6 +160,48 @@ Donc : dès qu'un conteneur est déclaré dans un docker-compose.yml il peut joi
 Bon j'arrête de blabla, voilà le soleil.
 🌞 docker-compose.yml
 
+```
+version: '3.8'
+
+services:
+  app:
+    image: php:8.0-apache
+    container_name: symfony_app
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    container_name: symfony_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: symfony
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql/seed.sql:/docker-entrypoint-initdb.d/seed.sql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: symfony_phpmyadmin
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
+
+```
+
 genre tp2/php/docker-compose.yml dans votre dépôt git de rendu
 votre code doit être à côté dans un dossier src : tp2/php/src/tous_tes_bails.php
 
