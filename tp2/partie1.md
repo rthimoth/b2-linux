@@ -160,9 +160,10 @@ Donc : dès qu'un conteneur est déclaré dans un docker-compose.yml il peut joi
 Bon j'arrête de blabla, voilà le soleil.
 🌞 docker-compose.yml
 
+https://github.com/fyleeds/ecommerce.git
+
 ```
 dans le fichier ecommerce/docker lien vers le github
-[lien vers projet symfony](https://github.com/fyleeds/ecommerce.git)
 
 version: '3'
 
