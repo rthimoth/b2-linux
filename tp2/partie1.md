@@ -161,8 +161,9 @@ Bon j'arrête de blabla, voilà le soleil.
 🌞 docker-compose.yml
 
 ```
-dans le fichier ecommerce/docker 
+dans le fichier ecommerce/docker lien vers le github
 
+https://github.com/fyleeds/ecommerce.git
 
 version: '3'
 
