@@ -162,8 +162,7 @@ Bon j'arrête de blabla, voilà le soleil.
 
 ```
 dans le fichier ecommerce/docker lien vers le github
-
-https://github.com/fyleeds/ecommerce.git
+[lien vers projet symfony](https://github.com/fyleeds/ecommerce.git)
 
 version: '3'
 
