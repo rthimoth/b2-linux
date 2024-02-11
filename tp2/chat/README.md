@@ -5,4 +5,10 @@
 Pour construire l'image Docker, exécutez :
 
 ```bash
-docker build -t chatroom .
+docker build -t chat .
+
+docker run -it -p 5000:5000 calc bash
+
+python chat.py
+
+```
